@@ -1,12 +1,12 @@
-
-# check params 
-
 # get input and output file names
 
 plink2treemix <- function(inputfile, outputfile){
   library(data.table)
   library(R.utils) 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 435bfd93af73fb956d6cddf487b3bc58c9623637
 
   ifile <-fread(inputfile)
   ifile <- read.table(gzfile(inputfile), header = T)
@@ -29,7 +29,7 @@ plink2treemix <- function(inputfile, outputfile){
       A <- temp$MAC[temp$SNP == s]
       B <- temp$NCHROBS[temp$SNP == s]
       res[s,p] <- paste(A,B-A, sep = ",")
-  
+      
     }
   }
   
