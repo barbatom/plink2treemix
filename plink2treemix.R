@@ -1,16 +1,9 @@
-
-# check params 
-
 # get input and output file names
 
 plink2treemix <- function(inputfile, outputfile){
   library(data.table)
   library(R.utils) 
-  
-  inputfile <- "D:\\IAEA\\FINAL_ASIAN_ZEBU_MARIO_SHARED\\Treemix\\dataset_m0.01_ld0.1_king.frq.strat"
-  
-  outputfile <- "D:\\IAEA\\FINAL_ASIAN_ZEBU_MARIO_SHARED\\Treemix\\dataset_m0.01_ld0.1_king.frq.strat.tx"
-  
+
   ifile <-fread(inputfile)
   ifile <- read.table(gzfile(inputfile), header = T)
   
@@ -32,7 +25,7 @@ plink2treemix <- function(inputfile, outputfile){
       A <- temp$MAC[temp$SNP == s]
       B <- temp$NCHROBS[temp$SNP == s]
       res[s,p] <- paste(A,B-A, sep = ",")
-  
+      
     }
   }
   
