@@ -7,6 +7,7 @@ plink2treemix <- function(inputfile, outputfile){
   library(data.table)
   library(R.utils) 
   
+
   ifile <-fread(inputfile)
   ifile <- read.table(gzfile(inputfile), header = T)
   
